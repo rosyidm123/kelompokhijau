@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_item_keranjang"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:background="@drawable/white_rounded_outline_red"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <ImageView
+        android:id="@+id/img_menu_keranjang"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/text_harga_keranjang"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/text_menu_keranjang"
+        app:srcCompat="@android:drawable/ic_menu_gallery" />
+
+    <TextView
+        android:id="@+id/text_menu_keranjang"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:text="TextView"
+        android:textColor="@color/purple_700"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/img_delete"
+        app:layout_constraintStart_toEndOf="@+id/img_menu_keranjang"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_varian_keranjang"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="@+id/text_menu_keranjang"
+        app:layout_constraintTop_toBottomOf="@+id/text_menu_keranjang" />
+
+    <TextView
+        android:id="@+id/text_harga_keranjang"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="TextView"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/text_varian_keranjang"
+        app:layout_constraintEnd_toEndOf="@+id/text_menu_keranjang"
+        app:layout_constraintStart_toEndOf="@+id/text_varian_keranjang"
+        app:layout_constraintTop_toTopOf="@+id/text_varian_keranjang" />
+
+    <ImageView
+        android:id="@+id/img_delete"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/text_varian_keranjang"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/text_menu_keranjang"
+        app:srcCompat="@drawable/ic_baseline_delete_24" />
+
+    <EditText
+        android:id="@+id/jumlah_barang"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:hint="Jumlah"
+        android:inputType="number"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/text_harga_keranjang"
+        app:layout_constraintStart_toStartOf="@+id/text_varian_keranjang"
+        app:layout_constraintTop_toBottomOf="@+id/text_harga_keranjang" />
+
+    <TextView
+        android:id="@+id/tot"
+        android:layout_width="52dp"
+        android:layout_height="17dp"
+        android:text="TextView"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/img_delete"
+        app:layout_constraintStart_toStartOf="@+id/img_delete"
+        app:layout_constraintTop_toBottomOf="@+id/img_delete" />
+</androidx.constraintlayout.widget.ConstraintLayout>
